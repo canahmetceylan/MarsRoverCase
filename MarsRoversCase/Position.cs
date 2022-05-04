@@ -89,5 +89,9 @@ public class Position : IPosition
                     throw new InvalidDataException($"Invalid data type {move}");
             }
         }
+        if (this.X < 0 || this.X > maxPoint[0] || this.Y < 0 || this.Y > maxPoint[1])
+        {
+            throw new Exception($"Oops! Exited to the field (0 , 0) and ({maxPoint[0]} , {maxPoint[1]})");
+        }
     }
 }
